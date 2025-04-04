@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    background-color: #f4f6f5;
+}
+
+h1 {
+    color: green;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#logo.img {
+    width: 50px;
+    height: 50px;
+}
+#submit {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #f4f6f5;
+    border: 2px solid #4CAF50;
+    background-color: #4CAF50;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+#submit:hover {
+    box-shadow: 0 0 20px rgba(0, 128, 0, 0.494);
+    background-color: green;
+    border-color: green;
+}

@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Seminar khoa học</title>
+
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <img src="{% static 'images/iai.png' %}" alt="Logo" width="50" height="50">
+            <img src="{% static 'images/uet.png' %}" alt="Logo" width="50" height="50">
+            <img src="{% static 'images/vnu.png' %}" alt="Logo" width="50" height="50">
+        </div>
+        <h1>Viện TTNT, Trường Đại học Công Nghệ, ĐHQGHN</h1>
+        <h2>Phát hiện bệnh phấn trắng, nấm đốm trên lá cây trồng</h2>
+        <h2>Trần Tiến Nam, Nguyễn Đức Minh</h2>
+        <hr>
+    </div>
+    <h3>{{status}}</h3>
+    <form action="result" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="image" id="file_input" accept="image/*">
+        <input type="submit" id="submit" value="Phân loại">
+    </form>
+    <div id="drop-zone">
+        <img id="place_image" src="{{ image_url }}">
+        {%comment%}
+            Hiển thị lại ảnh đã chọn
+            
+        {%endcomment%}           
+    </div>
+    {% comment %} <form action="result" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="image" accept="image/*">
+        <input type="submit" value="Upload">
+    </form> {% endcomment %}
+
+	<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
